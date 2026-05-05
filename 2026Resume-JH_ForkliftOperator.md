@@ -1,44 +1,46 @@
----
-Joseph S. Hice
----
-###### [ jhice2525@outlook.com ] - [ 470-423-4087 ] - [ [Github](https://github.com/felipefinch) ]
-#### Experienced project manager with a track record of delivering high-quality results on time and within budget.
+# Joseph S. Hice
 
-## Skills
-```Project management```
-```Team leadership```
-```Budget management```
-```Communication```
-```Problem-solving```
-```Agile methodology```
-```Microsoft Project```
-```JIRA```
-```SQL```
+6178 Cardinal Drive, Gainesville, GA 30506
 
-**Languages**: Java, Kotlin, Rust  
-**Databases**: Redis, Postgres, Neo4j  
-**Tools**: Spring, Kubernetes, Github-Actions, Linux, Nix, Git, Rest, GraphQL
+470-423-4087 - <jhice2525@outlook.com>
 
-## Experience
-### Jamba Juice
-##### Senior Project Manager, January 2015 - Present
-- Led cross-functional teams in the successful delivery of multiple software projects, including a major website redesign and a mobile app launch.
-- Managed budgets of up to $5 million and ensured projects were delivered on time and within scope.
-- Coordinated communication with stakeholders, including executive leadership and development teams.
+### Objective
 
-### PF Chang's
-##### Project Manager, February 2011 - December 2014
-- Managed a portfolio of software and hardware projects, including a new CRM implementation and a network infrastructure upgrade.
-- Worked closely with business analysts and technical teams to ensure project requirements were met and delivered on schedule.
-- Maintained project documentation and provided regular status updates to executive leadership.
+Motivated and detail-oriented professional with strong organizational and communication skills. Seeking to become a team member withing your organization, work hard and contribute to the company's progress and goals.
 
+#### Experience
+----
 
-## Projects
-**[*resume-md*](http://www.github.com/siph/resume-md)**
+######  2023 - 2025 Maintenance Technician - Evisceration 1st Processing | Fieldale Farms | Murrayville, GA
 
-Build your resume using markdown and have it generated as a pdf and html.
+- Maintenance support where I was responsible for Cropper, Neck-Breaker, Bird-Washers, and Draw Machineries. I conducted preventive maintenance on evisceration machines, Turn-wheel greasing and rebuilds for main lines and various other duties in support of Fieldale's processing lines. This was a full seven-day work period, as the demand required; Production line installations and outdated equipment removal.
+- Additionally, I started on the Production line where I was responsible for cutting and inspecting poultry products moving down the line through various processing locations; Sort, Quartering, and Salvage.
 
-## Education
+##### Education
+----
 
-### Reno University
-**Degree:** Bachelor of Science in Computer Science | **Years Attended:** 2016-2019 | **City, State:** Reno, NV
+| Date        | College / Trade School     | Degree                          | Location     |
+| ----------- | -------------------------- | ------------------------------- | ------------ |
+| 2005 - 2008 | Gwinnett Technical College | AA - Computer Programming       | Gwinnett, GA |
+| 1994 - 1996 | DeVry \| Electronics       | AA - Electronics                | Decatur, GA  |
+
+##### Certifications & Licenses
+----
+
+| Date | Training Organization | Description                  | Location        |
+| ---- | ------------- | ------------------------------------ | --------------- |
+| 2026 |               | Forklift - OSHA                      | Gainesville, GA |
+| 2026 | Career Safe   | OSHA 10-Hour General Industry Course | Online/Goodwill |
+| 2026 |               | CPR                                  |                 |
+| 2016 | DigitalCrafts | CT - Full-Stack Web Development      | Atlanta, GA     |
+
+##### Skills
+----
+
+| Technical | Operational | Safety & Soft|
+| ---- | ------------- | ------------------------------------ |
+| Counterbalance Forklift | Order Picking & Staging | OSHA 10 |
+| Reach Truck | Inventory Control | Pre-Operational Checks |
+| Electric Pallet Jack | Loading & Un-Loading | Spatial Awareness |
+| RF Scanners (WMS) | Shipping & Receiving | Team Communication |
+| Order Pickers | Inventory Management | Dependability |
