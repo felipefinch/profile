@@ -6,3 +6,7 @@ body {
   color: var(--sl-color-neutral-900);
   padding: 1rem;
 }
+
+p {
+    font-size: 30px;
+}
