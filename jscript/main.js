@@ -1,4 +1,9 @@
 
+document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var instances = M.Dropdown.init(elems, options);
+});
+
 function grabMDFile(nameOfFile) {
     console.log("What is name of MD file? " + nameOfFile);
 
