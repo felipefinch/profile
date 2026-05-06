@@ -6,32 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Markdown From FILE!</title>
 
-  <!-- Tailwind CSS via CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Flowbite CSS (optional, mostly Tailwind handles styles) -->
-  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" /> -->
-  <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 </head>
 
 <body>
-  <div>
-    <form class="max-w-sm mx-auto">
-      <label for="countries" class="block mb-2.5 text-sm font-medium text-heading">Select an option</label>
-      <select id="countries"
-        class="block w-full px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body">
-        <option selected>Choose a country</option>
-        <option value="US">United States</option>
-        <option value="CA">Canada</option>
-        <option value="FR">France</option>
-        <option value="DE">Germany</option>
-      </select>
-    </form>
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
+      Dropdown
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+      <button class="dropdown-item" type="button">Action</button>
+      <button class="dropdown-item" type="button">Another action</button>
+      <button class="dropdown-item" type="button">Something else here</button>
+    </div>
   </div>
 
-
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
   <script src="jscript/main.js"></script>
 </body>
 
