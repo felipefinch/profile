@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdown from File</title>
+</head>
+<body>
+  <div id="content">Loading...</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    fetch('README.md') // Must be in the same repo for GitHub Pages
+      .then(response => {
+        if (!response.ok) throw new Error("Markdown file not found");
+        return response.text();
+      })
+      .then(md => {
+        document.getElementById('content').innerHTML = marked.parse(md);
+      })
+      .catch(err => {
+        document.getElementById('content').textContent = "Error loading content.";
+        console.error(err);
+      });
+  </script>
+</body>
+</html>
