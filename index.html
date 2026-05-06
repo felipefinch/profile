@@ -33,8 +33,13 @@
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
   <!-- Custom scripting -->
-   <script>$('.dropdown-trigger').dropdown();</script>
-   
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.dropdown-trigger');
+      // var instances = M.Dropdown.init(elems, options);
+    });    
+  </script>
+
   <script src="jscript/main.js"></script>
 </body>
 
