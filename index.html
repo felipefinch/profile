@@ -8,39 +8,35 @@
 
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" hret="style/main.css">
 </head>
 
 <body>
-  <!-- Progress-Bar Example -->
-  <!-- <div class="progress">
-      <div class="indeterminate"></div>
-  </div> -->
-  <!-- Dropdown Trigger -->
-  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
-
-  <!-- Dropdown Structure -->
-  <ul id='dropdown1' class='dropdown-content'>
-    <li><a href="#!">one</a></li>
-    <li><a href="#!">two</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li><a href="#!">three</a></li>
-    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-  </ul>
-
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
-  <!-- Custom scripting -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var elems = document.querySelectorAll('.dropdown-trigger');
-      // var instances = M.Dropdown.init(elems, options);
-    });    
-  </script>
-
   <script src="jscript/main.js"></script>
+
+  <sl-dropdown>
+    <sl-button slot="trigger" caret>Dropdown</sl-button>
+    <sl-menu>
+      <sl-menu-item>Dropdown Item 1</sl-menu-item>
+      <sl-menu-item>Dropdown Item 2</sl-menu-item>
+      <sl-menu-item>Dropdown Item 3</sl-menu-item>
+      <sl-divider></sl-divider>
+      <sl-menu-item type="checkbox" checked>Checkbox</sl-menu-item>
+      <sl-menu-item disabled>Disabled</sl-menu-item>
+      <sl-divider></sl-divider>
+      <sl-menu-item>
+        Prefix
+        <sl-icon slot="prefix" name="gift"></sl-icon>
+      </sl-menu-item>
+      <sl-menu-item>
+        Suffix Icon
+        <sl-icon slot="suffix" name="heart"></sl-icon>
+      </sl-menu-item>
+    </sl-menu>
+  </sl-dropdown>
+
 </body>
 
 </html>
