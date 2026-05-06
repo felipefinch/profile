@@ -6,22 +6,12 @@
   <title>Markdown From FILE!</title>
 </head>
 <body>
-  <div id="content">Loading...</div>
+  <div id="content">
+
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script>
-    fetch('README.md') // Must be in the same repo for GitHub Pages
-      .then(response => {
-        if (!response.ok) throw new Error("Markdown file not found");
-        return response.text();
-      })
-      .then(md => {
-        document.getElementById('content').innerHTML = marked.parse(md);
-      })
-      .catch(err => {
-        document.getElementById('content').textContent = "Error loading content.";
-        console.error(err);
-      });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="/jscript/main.js"></script>
 </body>
 </html>
