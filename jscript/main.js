@@ -18,35 +18,34 @@ function grabMDFile(nameOfFile) {
     return null;
 }
 
-// listFiles.js
-const fs = require('fs');
-const path = require('path');
+function listMDFiles() {
+    (async function () {
+        const owner = "YOUR_GITHUB_USERNAME"; // e.g., "octocat"
+        const repo = "YOUR_REPO_NAME";        // e.g., "my-website"
+        const path = "YOUR_FOLDER_PATH";      // e.g., "assets/images"
+        const branch = "main";                // or "master"
 
-/**
- * List all files in a given directory (non-recursive)
- * @param {string} dirPath - Path to the directory
- */
-function listMDFiles(dirPath) {
-    try {
-        if (!fs.existsSync(dirPath)) {
-            console.error("Directory does not exist:", dirPath);
-            return;
+        const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}`;
+
+        try {
+            const response = await fetch(apiUrl);
+            if (!response.ok) throw new Error(`GitHub API error: ${response.status}`);
+            const files = await response.json();
+
+            const list = document.getElementById("file-list");
+            files.forEach(file => {
+                if (file.type === "file") {
+                    const li = document.createElement("li");
+                    const link = document.createElement("a");
+                    link.href = file.download_url;
+                    link.textContent = file.name;
+                    li.appendChild(link);
+                    list.appendChild(li);
+                }
+            });
+        } catch (err) {
+            console.error(err);
+            document.getElementById("file-list").textContent = "Error loading file list.";
         }
-
-        const files = fs.readdirSync(dirPath);
-        files.forEach(file => {
-            const fullPath = path.join(dirPath, file);
-            const stats = fs.statSync(fullPath);
-            if (stats.isFile()) {
-                console.log("File:", file);
-            } else if (stats.isDirectory()) {
-                console.log("Directory:", file);
-            }
-        });
-    } catch (err) {
-        console.error("Error reading directory:", err.message);
-    }
+    })();
 }
-
-// Example usage:
-// listFiles("./"); // Current directory
