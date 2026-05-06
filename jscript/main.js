@@ -1,4 +1,6 @@
 
+console.log("main.js is being Called!");
+
 function grabMDFile(nameOfFile) {
     console.log("What is name of MD file? " + nameOfFile);
 
