@@ -11,7 +11,7 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - run: echo "The previous workflow succeeded!"
-      
+
   convert_docs:
     runs-on: ubuntu-latest
     steps:
@@ -21,13 +21,22 @@ jobs:
         uses: BaileyJM02/markdown-to-pdf@v1.2.0
         with:
           input_path: MData/               # Folder where your .md files are
-          output_dir: afacts/             # Where to save the results
+          output_dir: afiles/             # Where to save the results
           build_html: true                # Also generate HTML
           build_pdf: true                 # Also generate PDF
-          table_of_contents: true
+          table_of_contents: false
 
-      - name: Upload Artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: converted-documents
-          path: afacts/
+      - name: Commit Files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add afiles/
+          git commit -m "Add generated PDF and HTML to afacts folder..." || echo "No changes to commit"
+          git push
+
+      # NO ARTIFACTS
+      # - name: Upload Artifacts
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: converted-documents
+      #     path: afacts/
