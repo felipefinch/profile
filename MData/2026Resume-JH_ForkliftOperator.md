@@ -1,8 +1,10 @@
-# Joseph S. Hice
-
-6178 Cardinal Drive, Gainesville, GA 30506
-
-470-423-4087 - <jhice2525@outlook.com>
+<div style="text-align:center">
+    <h1>Joseph S. Hice</h1>
+    <div style="line-height:0.5; font-family:Verdana">
+        <p>470-423-4087</p>
+        <p>jhice2525@outlook.com</p>
+    </div>
+</div>
 
 ### Objective
 
@@ -23,6 +25,7 @@ Motivated and detail-oriented professional with strong organizational and commun
 | :-----------: | -------------------------- | ------------------------------- | ------------ |
 | 2005 - 2008 | Gwinnett Technical College | AA - Computer Programming       | Gwinnett, GA |
 | 1994 - 1996 | DeVry \| Electronics       | AA - Electronics                | Decatur, GA  |
+
 
 ### Certifications & Licenses
 ----
