@@ -7,8 +7,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Convert Markdown to PDF/HTML
-        uses: BaileyJM02/markdown-to-pdf@v1
+      - name: Markdown to PDF and HTML
+        uses: BaileyJM02/markdown-to-pdf@v1.2.0
         with:
           input_path: MData/               # Folder where your .md files are
           output_dir: afacts/             # Where to save the results
@@ -20,4 +20,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: converted-documents
-          path: output/
+          path: afacts/
