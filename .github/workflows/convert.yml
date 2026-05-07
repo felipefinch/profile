@@ -11,7 +11,7 @@ jobs:
         uses: BaileyJM02/markdown-to-pdf@v1
         with:
           input_path: MData/               # Folder where your .md files are
-          output_dir: MData/output/             # Where to save the results
+          output_dir: afacts/             # Where to save the results
           build_html: true                # Also generate HTML
           build_pdf: true                 # Also generate PDF
           table_of_contents: true
