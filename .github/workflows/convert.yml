@@ -1,7 +1,17 @@
 name: Generate Documents
-on: [push]
+on:
+  workflow_run:
+    workflows: ["Deploy Static Site!"] # Run static.yml file first then do this one...branches: 
+    types:
+      - completed
 
 jobs:
+  on-success:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - run: echo "The previous workflow succeeded!"
+      
   convert_docs:
     runs-on: ubuntu-latest
     steps:
