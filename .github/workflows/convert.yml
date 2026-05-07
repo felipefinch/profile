@@ -1,7 +1,7 @@
 name: Generate Documents
 on:
   workflow_run:
-    workflows: ["Deploy Static Site!"] # Run static.yml file first then do this one...branches: 
+    workflows: [ "Deploy Static Site!" ] # Run static.yml file first then do this one...branches: 
     types:
       - completed
 
@@ -20,10 +20,10 @@ jobs:
       - name: Markdown to PDF and HTML
         uses: BaileyJM02/markdown-to-pdf@v1.2.0
         with:
-          input_path: MData/               # Folder where your .md files are
-          output_dir: afiles/             # Where to save the results
-          build_html: true                # Also generate HTML
-          build_pdf: true                 # Also generate PDF
+          input_path: MData/ # Folder where your .md files are
+          output_dir: afiles/ # Where to save the results
+          build_html: true # Also generate HTML
+          build_pdf: true # Also generate PDF
           table_of_contents: false
 
       - name: Commit Files
@@ -31,9 +31,9 @@ jobs:
           git config --local user.email "269244147+felipefinch@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add afiles/
-          git commit -m "Add generated PDF and HTML to afacts folder..." || echo "No changes to commit"
+          git commit -m "Distributing converted MD (PDF/HTML) Files to 'afiles' folder in repository." || echo "No changes to commit"
           git push
-
+          
       # NO ARTIFACTS
       # - name: Upload Artifacts
       #   uses: actions/upload-artifact@v4
