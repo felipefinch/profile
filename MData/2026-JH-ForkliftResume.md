@@ -48,7 +48,7 @@ Responsible for all equipment repair, support and weekend preventive maintenance
 1994 - 1996  &ensp;**AA - Electronics**&ensp; | &ensp;*DeVry &ensp;|&ensp; Decatur, GA* 
 
 ## Hobbies & Interest
-&emsp; - Landscaping & Gardening  
-&emsp; - Wood Projects & Crafts  
-&emsp; - Reading, Writing & Biblical Studies  
-&emsp; - Web Programming
++ Landscaping & Gardening  
++ Wood Projects & Crafts  
++ Reading, Writing & Biblical Studies  
++ Web Programming
