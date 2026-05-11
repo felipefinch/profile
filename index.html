@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PRUNED</title>
-  <link rel="stylesheet" href="https://ka-p.webawesome.com/kit/b9bfcf2dca544e85/webawesome@3.6.0/styles/webawesome.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/pruned/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/pruned/favicon/favicon-32x32.png">
@@ -22,19 +23,34 @@
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="https://felipefinch.github.io/pruned/jscript/main.js"></script>
 
+  <div class="topnav" id="myTopnav">
+    <a href="#home" class="active">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+  <div style="padding-left:20px; padding-top:10px">
+    <h2>Responsive Topnav Example</h2>
+    <p>Resize the browser window to see how it works.</p>
+  </div>
+
   <sl-button onclick="window.open('afiles/2026-JH-ForkliftResume.html')">Open HTML Version</sl-button>
 
   <div id="examples" style="padding:20px">
 
-    <div class="buttons" style="padding: 10px">
-      <wa-button variant="brand">Click me!</wa-button>
-    </div>
 
     <div class="files" style="padding: 10px">
       <h1>Generated HTML & PDF Files for Resume Example(s)</h1>
       <ul id="file-list"></ul>
     </div>
+
   </div>
+
+
 
 
 </body>

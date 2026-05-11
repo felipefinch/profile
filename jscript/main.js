@@ -1,5 +1,13 @@
 
 
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
 
 function grabMDFile(nameOfFile) {
     console.log("What is name of MD file? " + nameOfFile);
