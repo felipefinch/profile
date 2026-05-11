@@ -41,7 +41,7 @@ Responsible for all equipment repair, support and weekend preventive maintenance
 > Counter-Balance LP Forklift operations, where I handled equipment placement, loading & unloading equipment from carrier trucks, inventory counts and RF scanning for all products moving in and out of the building.
 
 1990 - 1994  &ensp;**Communications Operator ( Radioman )**&ensp; | &ensp;*U.S. NAVY &ensp;|&ensp; Mayport, FL*  
-> Communications operator aboard the U.S.S. Antriim FFG-20. A U.S. I was responsible for transmitting, receiving, and processing all forms of telecommunications, including voice and data circuits between ships, aircraft, and shore stations.
+> Communications operator aboard the U.S.S. Antrim FFG-20. A U.S. I was responsible for transmitting, receiving, and processing all forms of telecommunications, including voice and data circuits between ships, aircraft, and shore stations.
 
 ## Education
 
