@@ -1,5 +1,5 @@
 
-console.log("main.js is being Called!");
+
 
 function grabMDFile(nameOfFile) {
     console.log("What is name of MD file? " + nameOfFile);
@@ -51,3 +51,31 @@ function listMDFiles() {
         }
     })();
 }
+
+async function listGitHubFiles() {
+  const url = `https://api.github.com/repositories/1230097187/contents/afiles`;
+
+    try {
+    const response = await fetch(url);
+    const files = await response.json();
+    const listElement = document.getElementById('file-list');
+
+    files.forEach(file => {
+      // Create a list item and link for each file
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      
+      // Use 'download_url' for raw file access or 'html_url' for the GitHub UI
+      a.href = file.download_url.split('/').slice(-2).join('/');
+      console.log(a.href);
+      a.textContent = file.name;
+      
+      li.appendChild(a);
+      listElement.appendChild(li);
+    });
+  } catch (error) {
+    console.error('Error fetching files:', error);
+  }
+}
+
+listGitHubFiles();
