@@ -141,6 +141,7 @@ async function listGitHubFiles() {
   }
 }
 
+// Call and list files on page load.
 listGitHubFiles();
 
 async function listCommitHistory() {
@@ -150,6 +151,8 @@ async function listCommitHistory() {
     const response = await fetch(url);
     const files = await response.json();
     const listElement = document.getElementById('file-list');
+
+    listElement.replaceChildren(); // Clear out innerHTML elements.
 
     files.forEach(file => {
       // Create a list item and link for each file
