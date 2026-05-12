@@ -97,7 +97,7 @@ async function getFileCommits(owner, repo, filePath) {
     if (!response.ok) throw new Error(`Error: ${response.status}`);
 
     const commits = await response.json();
-    const listContainer = document.getElementById('myList');
+    const listContainer = document.getElementById('commit-list');
     const headContainer = document.getElementById('history-title');
     headContainer.append(`Commit History for : ../${filePath} folder!`);
 
