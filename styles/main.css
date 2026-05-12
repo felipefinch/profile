@@ -16,15 +16,12 @@ body {margin:0;font-family:Arial}
 }
 
 .logo-pill {
-  border-radius: 50px; /* Crucial for pill shape */
-  padding: 10px 20px;
+  float: left;
+  padding: 3px;
   background-color: #f8f9fa;
-  border: 1px solid #ddd;
-  display: inline-block;
 }
 
 .logo-pill img {
-  height: 20px; /* Adjust height as needed */
   vertical-align: middle;
 }
 
