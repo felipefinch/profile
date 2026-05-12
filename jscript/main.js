@@ -3,8 +3,6 @@
 const owner = 'felipefinch';
 const repo = 'pruned';
 const resumes_PATH = 'MData/';
-// const DAILY_TOKEN = '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';
-
 
 
 function myFunction() {
@@ -35,14 +33,63 @@ function grabMDFile(nameOfFile) {
   return null;
 }
 
-async function getFileCommits() { // TOKEN will expire daily!
-  const url = `https://api.github.com/repos/${owner}/${repo}/commits?path=${encodeURIComponent(resumes_PATH)}`;
+// async function getFileCommits() { // TOKEN will expire daily!
+//   const url = `https://api.github.com/repos/${owner}/${repo}/commits?path=${encodeURIComponent(resumes_PATH)}`;
+
+//   try {
+//     const response = await fetch(url, {
+//       headers: {
+//         'Accept': 'application/vnd.github+json',
+//         // 'Authorization': `Bearer ${DAILY_TOKEN}`, // Remove if not using a token
+//         'X-GitHub-Api-Version': '2022-11-28'
+//       }
+//     });
+
+//     if (!response.ok) throw new Error(`Error: ${response.status}`);
+
+//     const commits = await response.json();
+//     const listContainer = document.getElementById('myList');
+//     const headContainer = document.getElementById('history-title');
+//     headContainer.append(`Commit History for : ../${resumes_PATH} folder!`);
+
+//     commits.forEach(commit => {
+//       console.log(`${commit.sha.substring(0, 7)}: ${commit.commit.message} (${commit.commit.author.date})`);
+
+//       const li = document.createElement('li');
+//       li.textContent = `${commit.commit.message}`; // Assuming data has a 'name' property
+//       listContainer.appendChild(li);
+//     });
+
+
+//   } catch (error) {
+//     console.error('Failed to fetch commits:', error);
+//   }
+// }
+
+async function getFileCommits(owner, repo, filePath) {
+  const url = `https://api.github.com/repos/${owner}/${repo}/commits?path=${encodeURIComponent(filePath)}`;
+  // const url = `https://github.com/${owner}/${repo}/commits?path=${encodeURIComponent(filePath)}`;
+
+  // try {
+  //   const response = await fetch(url);
+
+  //   if (!response.ok) {
+  //     throw new Error(`Error: ${response.status} ${response.statusText}`);
+  //   }
+
+  //   const commits = await response.json();
+  //   return commits.map(c => ({
+  //     sha: c.sha,
+  //     message: c.commit.message,
+  //     author: c.commit.author.name,
+  //     date: c.commit.author.date
+  //   }));
 
   try {
     const response = await fetch(url, {
       headers: {
         'Accept': 'application/vnd.github+json',
-        // 'Authorization': `Bearer ${DAILY_TOKEN}`, // Remove if not using a token
+        //'Authorization': `Bearer ${token}`, // Remove if not using a token
         'X-GitHub-Api-Version': '2022-11-28'
       }
     });
@@ -52,7 +99,7 @@ async function getFileCommits() { // TOKEN will expire daily!
     const commits = await response.json();
     const listContainer = document.getElementById('myList');
     const headContainer = document.getElementById('history-title');
-    headContainer.append(`Commit History for : ../${resumes_PATH} folder!`);
+    headContainer.append(`Commit History for : ../${filePath} folder!`);
 
     commits.forEach(commit => {
       console.log(`${commit.sha.substring(0, 7)}: ${commit.commit.message} (${commit.commit.author.date})`);
@@ -62,12 +109,10 @@ async function getFileCommits() { // TOKEN will expire daily!
       listContainer.appendChild(li);
     });
 
-
   } catch (error) {
-    console.error('Failed to fetch commits:', error);
+    console.error("Failed to fetch commits:", error);
   }
 }
-
 
 
 async function listGitHubFiles() {
