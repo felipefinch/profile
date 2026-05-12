@@ -17,11 +17,12 @@ body {margin:0;font-family:Arial}
 
 .logo-pill {
   float: left;
-  padding: 3px;
-  background-color: #f8f9fa;
+  padding: 5px;
+  background-color: #333;
 }
 
 .logo-pill img {
+  width: 44px;
   vertical-align: middle;
 }
 
