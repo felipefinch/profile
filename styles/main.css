@@ -25,6 +25,7 @@ body {margin:0;font-family:Arial}
 
 .logo-pill img {
   height: 20px; /* Adjust height as needed */
+  vertical-align: middle;
 }
 
 
