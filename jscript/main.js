@@ -3,7 +3,7 @@
 const owner = 'felipefinch';
 const repo = 'pruned';
 const resumes_PATH = 'MData/';
-const DAILY_TOKEN = `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`;
+// const DAILY_TOKEN = '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';
 
 
 
@@ -42,7 +42,7 @@ async function getFileCommits() { // TOKEN will expire daily!
     const response = await fetch(url, {
       headers: {
         'Accept': 'application/vnd.github+json',
-        'Authorization': `Bearer ${DAILY_TOKEN}`, // Remove if not using a token
+        // 'Authorization': `Bearer ${DAILY_TOKEN}`, // Remove if not using a token
         'X-GitHub-Api-Version': '2022-11-28'
       }
     });
