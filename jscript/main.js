@@ -68,22 +68,6 @@ function grabMDFile(nameOfFile) {
 
 async function getFileCommits(owner, repo, filePath) {
   const url = `https://api.github.com/repos/${owner}/${repo}/commits?path=${encodeURIComponent(filePath)}`;
-  // const url = `https://github.com/${owner}/${repo}/commits?path=${encodeURIComponent(filePath)}`;
-
-  // try {
-  //   const response = await fetch(url);
-
-  //   if (!response.ok) {
-  //     throw new Error(`Error: ${response.status} ${response.statusText}`);
-  //   }
-
-  //   const commits = await response.json();
-  //   return commits.map(c => ({
-  //     sha: c.sha,
-  //     message: c.commit.message,
-  //     author: c.commit.author.name,
-  //     date: c.commit.author.date
-  //   }));
 
   try {
     const response = await fetch(url, {
@@ -99,6 +83,12 @@ async function getFileCommits(owner, repo, filePath) {
     const commits = await response.json();
     const listContainer = document.getElementById('commit-list');
     const headContainer = document.getElementById('history-title');
+
+    // Clear-out innerHTML & Elements for each iteration
+    listContainer.replaceChildren();
+    headContainer.replaceChildren();
+
+    // Append the commit history main title
     headContainer.append(`Commit History for : ../${filePath} folder!`);
 
     commits.forEach(commit => {
@@ -144,33 +134,34 @@ async function listGitHubFiles() {
 // Call and list files on page load.
 listGitHubFiles();
 
-async function listCommitHistory() {
-  const url = `https://api.github.com/repos/felipfinch/pruned/commits`;
 
-  try {
-    const response = await fetch(url);
-    const files = await response.json();
-    const listElement = document.getElementById('file-list');
+// async function listCommitHistory() {
+//   const url = `https://api.github.com/repos/felipfinch/pruned/commits`;
 
-    listElement.replaceChildren(); // Clear out innerHTML elements.
+//   try {
+//     const response = await fetch(url);
+//     const files = await response.json();
+//     const listElement = document.getElementById('commit-list');
 
-    files.forEach(file => {
-      // Create a list item and link for each file
-      const li = document.createElement('li');
-      const a = document.createElement('a');
+//     listElement.replaceChildren(); // Clear out innerHTML elements.
 
-      // Use 'download_url' for raw file access or 'html_url' for the GitHub UI
-      a.href = file.download_url.split('/').slice(-2).join('/');
-      console.log(a.href);
-      a.textContent = file.name;
+//     files.forEach(file => {
+//       // Create a list item and link for each file
+//       const li = document.createElement('li');
+//       const a = document.createElement('a');
 
-      li.appendChild(a);
-      listElement.appendChild(li);
-    });
-  } catch (error) {
-    console.error('Error fetching files:', error);
-  }
-}
+//       // Use 'download_url' for raw file access or 'html_url' for the GitHub UI
+//       a.href = file.download_url.split('/').slice(-2).join('/');
+//       console.log(a.href);
+//       a.textContent = file.name;
+
+//       li.appendChild(a);
+//       listElement.appendChild(li);
+//     });
+//   } catch (error) {
+//     console.error('Error fetching files:', error);
+//   }
+// }
 
 
 // function listMDFiles() {
