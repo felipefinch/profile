@@ -15,6 +15,20 @@ body {margin:0;font-family:Arial}
   font-size: 17px;
 }
 
+.logo-pill {
+  border-radius: 50px; /* Crucial for pill shape */
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  display: inline-block;
+}
+
+.logo-pill img {
+  height: 30px; /* Adjust height as needed */
+  vertical-align: middle;
+}
+
+
 .active {
   background-color: #04AA6D;
   color: white;
